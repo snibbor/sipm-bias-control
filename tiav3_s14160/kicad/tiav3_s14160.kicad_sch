@@ -5095,7 +5095,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "560nH"
+		(property "Value" "330nH"
 			(at 233.553 109.271 0)
 			(effects
 				(font
@@ -5172,7 +5172,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "120pF"
+		(property "Value" "62pF"
 			(at 225.425 120.015 0)
 			(effects
 				(font
@@ -5663,7 +5663,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "120p"
+		(property "Value" "62pF"
 			(at 240.665 120.015 0)
 			(effects
 				(font
