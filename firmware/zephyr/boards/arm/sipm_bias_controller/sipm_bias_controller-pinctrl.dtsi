@@ -1,0 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ * SiPM Bias Controller pinctrl: SERCOM0 I2C, USB.
+ */
+
+#include <dt-bindings/pinctrl/samd21-da1gXabcd-pinctrl.h>
+
+&pinctrl {
+	sercom0_i2c_default: sercom0_i2c_default {
+		group1 {
+			pinmux = <PA8C_SERCOM0_PAD0>,
+				 <PA9C_SERCOM0_PAD1>;
+		};
+	};
+
+	usb_dc_default: usb_dc_default {
+		group1 {
+			pinmux = <PA25G_USB_DP>,
+				 <PA24G_USB_DM>;
+		};
+	};
+};

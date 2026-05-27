@@ -1,0 +1,9 @@
+if BOARD_SIPM_BIAS_CONTROLLER
+
+config BOARD
+	default "sipm_bias_controller"
+
+config SOC
+	default "atmel_samd21"
+
+endif

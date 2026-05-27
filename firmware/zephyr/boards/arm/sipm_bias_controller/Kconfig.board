@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+config BOARD_SIPM_BIAS_CONTROLLER
+	bool "Applikate SiPM Bias Controller board"
+	select SOC_SAMD21E18A
+	select BOARD_EARLY_INIT_HOOK

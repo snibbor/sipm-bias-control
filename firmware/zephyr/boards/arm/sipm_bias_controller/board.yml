@@ -1,0 +1,5 @@
+board:
+  name: sipm_bias_controller
+  vendor: applikate
+  socs:
+  - name: samd21e18a

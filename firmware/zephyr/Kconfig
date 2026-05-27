@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "SiPM Bias Controller"
+
+choice
+	prompt "LT836X boost converter variant"
+	default BIAS_LT8361
+	help
+	  Selects feedback network constants and voltage range for the
+	  on-board boost converter.
+
+config BIAS_LT8361
+	bool "LT8361 (100 V rated, R6=39k)"
+
+config BIAS_LT8362
+	bool "LT8362 (60 V rated, R6=52.3k)"
+
+endchoice

@@ -1,0 +1,3 @@
+# SPDX-License-Identifier: Apache-2.0
+source "boards/arm/sipm_bias_controller/Kconfig.board"
+source "boards/arm/sipm_bias_controller/Kconfig.defconfig"

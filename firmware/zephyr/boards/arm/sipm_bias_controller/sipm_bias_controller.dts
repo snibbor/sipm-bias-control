@@ -1,0 +1,163 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ * SiPM Bias Controller board (ATSAMD21E18A-AF).
+ *
+ * Pinout (verified against bias_generator_LT8362.kicad_sch):
+ *   PA00 = LDO_SHDN (HV LDO shutdown, active-high disables)
+ *   PA02 = Boost_Gain (DAC0 -> LT836X feedback)
+ *   PA08 = SDA (SERCOM0 PAD0, to MCP47FEB22)
+ *   PA09 = SCL (SERCOM0 PAD1, to MCP47FEB22)
+ *   PA10 = ~SHDN (LT836X boost shutdown, active-low disables)
+ *   PA24/PA25 = USB DM/DP
+ */
+
+/dts-v1/;
+#include <atmel/samd21.dtsi>
+#include <atmel/samx2xx18.dtsi>
+#include "sipm_bias_controller-pinctrl.dtsi"
+
+/ {
+	model = "sipm_bias_controller";
+	compatible = "applikate,sipm_bias_controller",
+		     "atmel,samd21e18a", "atmel,samd21";
+
+	chosen {
+		zephyr,console = &cdc_acm_uart0;
+		zephyr,shell-uart = &cdc_acm_uart0;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,code-partition = &slot0_partition;
+		zephyr,boot-mode = &boot_mode0;
+	};
+
+	/* Retained memory for boot mode flag (warm-reset persistent). */
+	sram_retainedmem: sram@20007ff0 {
+		compatible = "zephyr,memory-region", "mmio-sram";
+		reg = <0x20007FF0 0x10>;
+		zephyr,memory-region = "RetainedMem";
+		status = "okay";
+
+		retainedmem {
+			compatible = "zephyr,retained-ram";
+			status = "okay";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			boot_mode0: boot_mode@0 {
+				compatible = "zephyr,retention";
+				status = "okay";
+				reg = <0x0 0x4>;
+				prefix = [08 04];
+				checksum = <1>;
+			};
+		};
+	};
+
+	/* High-voltage LDO shutdown line. Net: LDO_SHDN.
+	 * Active-high *signal* disables the LDO; flag as ACTIVE_HIGH so
+	 * gpio_pin_set_dt(.., 1) means "shut down".
+	 */
+	hv_ldo: hv_ldo {
+		compatible = "gpio-leds";
+		hv_ldo_shdn: hv_ldo_shdn {
+			gpios = <&porta 0 GPIO_ACTIVE_HIGH>;
+			label = "HV_LDO_SHDN";
+		};
+	};
+
+	/* LT836X boost converter shutdown line. Net: ~SHDN.
+	 * Active-low signal: drive HIGH to run, LOW to shut down.
+	 * Flagged as ACTIVE_LOW so gpio_pin_set_dt(.., 1) means "enable boost".
+	 */
+	boost_en: boost_en {
+		compatible = "gpio-leds";
+		boost_shdn: boost_shdn {
+			gpios = <&porta 10 GPIO_ACTIVE_LOW>;
+			label = "BOOST_SHDN";
+		};
+	};
+};
+
+zephyr_udc0: &usb0 {
+	status = "okay";
+	pinctrl-0 = <&usb_dc_default>;
+	pinctrl-names = "default";
+};
+
+&zephyr_udc0 {
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+	};
+};
+
+&cpu0 {
+	clock-frequency = <48000000>;
+};
+
+/* I2C0 on SERCOM0 (PA08 SDA, PA09 SCL) -> MCP47FEB22 DAC */
+&sercom0 {
+	status = "okay";
+	compatible = "atmel,sam0-i2c";
+	clock-frequency = <I2C_BITRATE_STANDARD>;
+	#address-cells = <1>;
+	#size-cells = <0>;
+	pinctrl-0 = <&sercom0_i2c_default>;
+	pinctrl-names = "default";
+
+	/* MCP47FEB22 7-bit address. The Arduino code uses i2c_address=2
+	 * which on the MCP47FEB22 selects the A2 variant -> 0x62.
+	 * Verify against the actual part marking; common addresses are
+	 * 0x60 (A0), 0x61 (A1), 0x62 (A2), 0x63 (A3).
+	 */
+	mcp47feb22: mcp47feb22@62 {
+		compatible = "microchip,mcp47feb22";
+		reg = <0x62>;
+		status = "okay";
+		label = "BIAS_DAC";
+	};
+};
+
+/* On-chip DAC: drives Boost_Gain on PA02 (LT836X feedback). */
+&dac0 {
+	status = "okay";
+};
+
+/* Shrink main SRAM to exclude retained memory region */
+&sram0 {
+	reg = <0x20000000 0x7FF0>;
+};
+
+&flash0 {
+	erase-block-size = <256>;
+
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		/* MCUboot bootloader: 48 KiB at 0x00000 */
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x00000000 DT_SIZE_K(48)>;
+			read-only;
+		};
+
+		/* Application image (slot 0): 100 KiB at 0x0C000 */
+		slot0_partition: partition@c000 {
+			label = "image-0";
+			reg = <0x0000C000 DT_SIZE_K(100)>;
+		};
+
+		/* DFU staging image (slot 1): 100 KiB at 0x25000 */
+		slot1_partition: partition@25000 {
+			label = "image-1";
+			reg = <0x00025000 DT_SIZE_K(100)>;
+		};
+
+		/* NVS for calibration (offset, g42, g50): 8 KiB at 0x3E000 */
+		storage_partition: partition@3e000 {
+			label = "storage";
+			reg = <0x0003E000 DT_SIZE_K(8)>;
+		};
+	};
+};
