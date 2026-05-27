@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name "footprints")(type "KiCad")(uri "${KIPRJMOD}/footprints.pretty")(options "")(descr ""))
+  (lib (name "snibbor_logos")(type "KiCad")(uri "C:/Users/snibb/Documents/projects/snibbor inc/logo library.pretty")(options "")(descr "Bennett & Snibbor branding artwork"))
 )
