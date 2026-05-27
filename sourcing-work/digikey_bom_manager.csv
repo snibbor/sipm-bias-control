@@ -1,0 +1,48 @@
+Manufacturer Part Number,Quantity,Customer Reference,Description,Manufacturer
+CL10A225KO8NNNC,14,bias-control-lt8362:C2 C7 C9 C10 C14 C17 C18,"0603 16V X5R 10% [NOTE: VERIFIED ACTIVE: 261k in stock at DigiKey, $0.08 ea. Samsung 2.2uF 16V X5R 0603 ]",Samsung
+CL31B225KCHSNNE,10,bias-control-lt8362:C5 C6 C8 C11 C13,1206 100V X7R 10% [NOTE: Standardized on Samsung CL series. Original Murata GRM31CR72A225KA73L is OBSOLET],Samsung
+CL10A226MQ8NRNC,16,bias-control-lt8362:C1 C4; power-supply:C1 C3 C5 C6 C15; tiav3_s14160:C8,0603 6.3V X5R 20% [NOTE: Standardized on Samsung CL series (per user preference). Murata GRM188R60J226MEA],Samsung
+CL10A105KA8NNNC,6,bias-control-lt8362:C3; power-supply:C2 C8,0603 25V X5R 10%,Samsung
+CC0603JRNPO9BN250,2,bias-control-lt8362:C12,"0603 50V C0G/NP0 5% [NOTE: C12 (U2 LDO feedforward cap, sees ~49V steady state across R15). Yageo CC0603JRN]",Yageo
+CL10B222KB8NNNC,2,bias-control-lt8362:C15,0603 50V X7R 10%,Samsung
+CL10B103KB8NNNC,4,bias-control-lt8362:C16; power-supply:C17,0603 50V X7R 10% [NOTE: Old BOM PN 445-12286-1-ND was 0402; substitution applies to 0603.],Samsung
+RMCF0603FT5K10,12,bias-control-lt8362:R1 R3 R7 R8 R9 R10,0603 1% 1/10W,Stackpole
+RMCF0603FT39K0,6,bias-control-lt8362:R12 R15 R16,0603 1% 1/10W,Stackpole
+RMCF0603FT1M00,4,bias-control-lt8362:R4 R5,0603 1% 1/10W,Stackpole
+RMCF0603FT69K8,2,bias-control-lt8362:R2,0603 1% 1/10W,Stackpole
+RMCF0603FT52K3,2,bias-control-lt8362:R6,"0603 1% 1/10W [NOTE: R6 — assumed LT8362 variant (52.3k). For LT8361 build, swap to RMCF0603FT39K0CT-]",Stackpole
+RMCF0603FT36K5,2,bias-control-lt8362:R11,0603 1% 1/10W,Stackpole
+RMCF0603FT4R99,2,bias-control-lt8362:R13,0603 1% 1/10W [NOTE: BOM Value 'R13 = 5' — assumed 5.0 ohm; picked 4.99Ω 1% (closest E96). If 5.1Ω is],Stackpole
+SRP5020TA-3R3M,2,bias-control-lt8362:L1,SRP5020 (5.0x5.0x2.0mm) [NOTE: KiCad fp 'SRP05204R7K' is the SRP5020 land pattern (the '4R7K' in the fp name wa],Bourns
+1N4148WS-7-F,2,bias-control-lt8362:D2,SOD-323,Diodes Inc.
+"PMEG6030EP,115",2,bias-control-lt8362:D3,SOD-128 [NOTE: Often on backorder at DigiKey. Future Electronics typically has stock. If lead t],Nexperia
+MIC5317-3.3YM5-TR,2,bias-control-lt8362:U1,SOT-23-5,Microchip
+LT3014ES5#TRPBF,2,bias-control-lt8362:U2,SOT-23-5 [NOTE: TRUE DROP-IN: original Richtek RT9072BGB is OBSOLETE. After confirming schematic],Analog Devices
+MCP6C02T-020E/CHYVAO,2,bias-control-lt8362:U3,SOT-23-6 [NOTE: TRUE DROP-IN: same die / gain 20 V/V / SOT-23-6 / pinout as the original MCP6C02],Microchip
+LT8362EMSE#PBF,2,bias-control-lt8362:IC1,MSOP-16 EP [NOTE: Project README/git history shows LT8362 selected (LT8361 was the alternative). R],Analog Devices
+ATSAMD21E18A-AFT,2,bias-control-lt8362:IC2,"TQFP-32 7x7, AEC-Q100 automotive [NOTE: Matches schematic -AF (AEC-Q100 automotive, -40 to +125C). -AFT suffix is the cu]",Microchip
+MCP47FEB22A2-E/ST,2,bias-control-lt8362:IC4,"TSSOP-8 [NOTE: Dual 12-bit DAC, I2C address variant A2.]",Microchip
+TSM-104-01-L-SV-P-TR,2,bias-control-lt8362:J2,"1x4 SMD vertical, 2.54mm (P-TR loose cut-tape) [NOTE: Swapped from -T-SV-TR (T&R only, can't ship qty 1) to -L-SV-P-TR (P-TR = pre-loa]",Samtec
+TSW-103-07-F-D,2,bias-control-lt8362:J3,"2x3 THM vertical, 2.54mm [NOTE: Bias board J3 (SWD/Cortex Debug). The schematic symbol is 'Conn_01x06' but the 2]",Samtec
+UJ20-C-V-C-3-SMT-TR,2,bias-control-lt8362:J4,SMT vertical mid-mount USB-C [NOTE: SUBSTITUTE for -V-C-2 (which is on backorder at DigiKey). Verified via datasheet],Same Sky (CUI Devices)
+RMCF0603FT64K9,2,power-supply:R8,0603 1% 1/10W,Stackpole
+RMCF0603FT24K9,2,power-supply:R9,0603 1% 1/10W,Stackpole
+LM2776DBVR,2,power-supply:U1,SOT-23-6,Texas Instruments
+TPS72301DBVR,2,power-supply:U3,SOT-23-5,Texas Instruments
+TPS79333DBVR,2,power-supply:U5,SOT-23-5,Texas Instruments
+SSQ-103-03-G-D,2,power-supply:J3,"2x3 socket, 2.54mm, gold, 3mm depth [NOTE: Power-supply board J3.]",Samtec
+CL05A105KP5NNNC,8,tiav3_s14160:C5 C6 C7 C9,0402 10V X5R 10% [NOTE: Samsung MPN active but currently OOS at DigiKey (per Google snippet). If BOM Man],Samsung
+CL31B225KBHNNNE,4,tiav3_s14160:C1 C4,1206 50V X7R 10% [NOTE: TIA BOARD ONLY (C1/C4). Low-voltage bypass — standard 50V 1206 is fine.],Samsung
+GCM1555C1H620GA16J,4,tiav3_s14160:C2 C3,0402 50V C0G 2% [NOTE: Used 2% C0G — DigiKey didn't stock a 5% Murata GRM 0402/50V 62pF; tighter spec i],Murata
+RMCF0402FT49R9,2,tiav3_s14160:R1,0402 1% 1/16W [NOTE: 49.9Ω (standard 50Ω term).],Stackpole
+RMCF0402FT1K50,2,tiav3_s14160:R2,0402 1% 1/16W,Stackpole
+RMCF0402FT68R0,2,tiav3_s14160:R3,0402 1% 1/16W,Stackpole
+RMCF0402FT3R01,2,tiav3_s14160:R5,0402 1% 1/16W [NOTE: 3.01Ω chosen as closest E96 to '3.0'.],Stackpole
+RMCF0402FT4K99,2,tiav3_s14160:R7,0402 1% 1/16W [NOTE: 4.99k 1%.],Stackpole
+RMCF0402FT10R0,2,tiav3_s14160:R11,0402 1% 1/16W [NOTE: Hand-solder footprint takes same MPN.],Stackpole
+RMCF0402FT30R1,2,tiav3_s14160:R23,0402 1% 1/16W [NOTE: 30.1Ω chosen as closest E96 to '30'.],Stackpole
+LQW18AN33NJ00D,2,tiav3_s14160:L1,0603 wirewound [NOTE: High-SRF wirewound. Hand-solder footprint variant uses same MPN.],Murata
+LQW18CAR33J00D,2,tiav3_s14160:L2,"0603 wirewound [NOTE: High-SRF wirewound, ~1.4 GHz SRF. Good for TIA bias-T.]",Murata
+OPA847IDBVT,2,tiav3_s14160:U1,SOT-23-6,Texas Instruments
+SSQ-103-01-G-D,2,tiav3_s14160:J1,"2x3 socket, 2.54mm, gold, 1mm depth [NOTE: TIA board J1.]",Samtec
+131-3701-261,2,tiav3_s14160:J2,SMB jack vertical THM [NOTE: TIA board J2 RF output.],Cinch / Johnson

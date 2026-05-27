@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SiPM Bias Control — DigiKey Product Page Links</title>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; max-width: 1400px; margin: 1em auto; padding: 0 1em; }
+    h1 { margin-bottom: 0.2em; }
+    .intro { background: #e8f4ff; border-left: 4px solid #0066cc; padding: 0.8em 1em; margin: 1em 0; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.92em; }
+    th, td { border: 1px solid #ddd; padding: 0.4em 0.6em; vertical-align: top; }
+    th { background: #f0f0f0; text-align: left; position: sticky; top: 0; }
+    a.open { display: inline-block; background: #cc0000; color: white; padding: 0.3em 0.7em;
+             border-radius: 3px; text-decoration: none; white-space: nowrap; font-size: 0.85em; }
+    a.open:hover { background: #990000; }
+    .footer { margin: 2em 0; padding: 1em; background: #f8f8f8; border-radius: 4px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>SiPM Bias Control — DigiKey Product Page Links</h1>
+  <p style="color:#666">47 unique parts · 80 total units across all 3 boards</p>
+
+  <div class="intro">
+    <p><b>This page is the bulletproof fallback.</b> Each "Open on DigiKey →" button opens the
+       DigiKey product page in a new tab. Once there, click DigiKey's <b>Add to Cart</b> button
+       and DigiKey will use the current packaging SKU automatically — no part-number rotation issues.</p>
+    <p>For the bulk path, use <a href="https://www.digikey.com/bom">https://www.digikey.com/bom</a>
+       with <code><a href="digikey_bom_manager.csv">digikey_bom_manager.csv</a></code>.</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>MPN / Mfr</th>
+        <th>Qty</th>
+        <th>Refs</th>
+        <th>Package</th>
+        <th>Confidence</th>
+        <th>DigiKey</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><b>LT3014ES5#TRPBF</b><br><small>Analog Devices</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: U2</small></td>
+        <td><small>SOT-23-5</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/analog-devices-inc/LT3014ES5-TRPBF/889456" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>TRUE DROP-IN: original Richtek RT9072BGB is OBSOLETE. After confirming schematic context (U2 sits BETWEEN LT8362 boost output and BIAS rail via R13 sense resistor — Vin sees up to ~70V), the correct replacement is LT3014ES5#TRPBF: 80V Vin (matches RT9072B), 20mA out, 1.22V min Vout (matches), adjustable, SOT-23-5, SHDN on pin 3 (matches LDO_SHDN signal). No PCB or schematic changes needed. Earlier picks (LT1761 20V, MIC5235 30V, LT3008 45V) would have FAILED at 70V.</small></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><b>LT8362EMSE#PBF</b><br><small>Analog Devices</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: IC1</small></td>
+        <td><small>MSOP-16 EP</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/analog-devices-inc/LT8362EMSE-PBF/7599731" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Project README/git history shows LT8362 selected (LT8361 was the alternative). R6 value pairs with this (52.3k).</small></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><b>SRP5020TA-3R3M</b><br><small>Bourns</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: L1</small></td>
+        <td><small>SRP5020 (5.0x5.0x2.0mm)</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/bourns-inc/SRP5020TA-3R3M/7785064" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>KiCad fp 'SRP05204R7K' is the SRP5020 land pattern (the '4R7K' in the fp name was the original 4.7uH part; the BOM Value field overrides to 3.3uH). I_sat 7.3A is plenty for LT8362.</small></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><b>131-3701-261</b><br><small>Cinch / Johnson</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: J2</small></td>
+        <td><small>SMB jack vertical THM</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/131-3701-261/275098" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>TIA board J2 RF output.</small></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><b>1N4148WS-7-F</b><br><small>Diodes Inc.</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: D2</small></td>
+        <td><small>SOD-323</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/diodes-incorporated/1N4148WS-7-F/815281" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><b>ATSAMD21E18A-AFT</b><br><small>Microchip</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: IC2</small></td>
+        <td><small>TQFP-32 7x7, AEC-Q100 automotive</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/microchip-technology/ATSAMD21E18A-AFT/5057223" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Matches schematic -AF (AEC-Q100 automotive, -40 to +125C). -AFT suffix is the cut-tape/T&amp;R packaging variant of the same -AF die (orderable qty 1); the bare -AF MPN is tray-only at DigiKey.</small></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><b>MCP47FEB22A2-E/ST</b><br><small>Microchip</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: IC4</small></td>
+        <td><small>TSSOP-8</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/microchip-technology/MCP47FEB22A2-E-ST/5033359" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Dual 12-bit DAC, I2C address variant A2.</small></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><b>MCP6C02T-020E/CHYVAO</b><br><small>Microchip</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: U3</small></td>
+        <td><small>SOT-23-6</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6C02T-020E-CHYVAO/10674102" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>TRUE DROP-IN: same die / gain 20 V/V / SOT-23-6 / pinout as the original MCP6C02T-020E/CHY. The 'VAO' suffix is Microchip's AEC-Q100 automotive-qualified variant (same silicon, tighter qualification) — in stock at DigiKey while the bare /CHY is OOS until 22-Jun-2026. No firmware change, no R13 change.</small></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><b>MIC5317-3.3YM5-TR</b><br><small>Microchip</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: U1</small></td>
+        <td><small>SOT-23-5</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/microchip-technology/MIC5317-3-3YM5-TR/5049120" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><b>GCM1555C1H620GA16J</b><br><small>Murata</small></td>
+        <td>2</td>
+        <td><small>tiav3_s14160: C2 C3</small></td>
+        <td><small>0402 50V C0G 2%</small></td>
+        <td style="background:#ffc107;color:white;text-align:center;font-size:0.85em">medium</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H620GA16J/5247920" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Used 2% C0G — DigiKey didn't stock a 5% Murata GRM 0402/50V 62pF; tighter spec is acceptable.</small></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><b>LQW18AN33NJ00D</b><br><small>Murata</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: L1</small></td>
+        <td><small>0603 wirewound</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/murata-electronics/LQW18AN33NJ00D/584383" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>High-SRF wirewound. Hand-solder footprint variant uses same MPN.</small></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><b>LQW18CAR33J00D</b><br><small>Murata</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: L2</small></td>
+        <td><small>0603 wirewound</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/murata-electronics/LQW18CAR33J00D/9742071" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>High-SRF wirewound, ~1.4 GHz SRF. Good for TIA bias-T.</small></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><b>PMEG6030EP,115</b><br><small>Nexperia</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: D3</small></td>
+        <td><small>SOD-128</small></td>
+        <td style="background:#ffc107;color:white;text-align:center;font-size:0.85em">medium</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/nexperia-usa-inc/PMEG6030EP-115/2531817" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Often on backorder at DigiKey. Future Electronics typically has stock. If lead time matters, source from Future.</small></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><b>UJ20-C-V-C-3-SMT-TR</b><br><small>Same Sky (CUI Devices)</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: J4</small></td>
+        <td><small>SMT vertical mid-mount USB-C</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/UJ20-C-V-C-3-SMT-TR/25583800" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>SUBSTITUTE for -V-C-2 (which is on backorder at DigiKey). Verified via datasheet comparison: -3 variant has IDENTICAL PCB footprint, IDENTICAL pin assignments (A1=GND, A4=VBUS, A5=CC1, A6=Dp1, A7=Dn1, A8=SBU1, A9=VBUS, A12=GND, B1=GND, B4=VBUS, B5=CC2, B6=Dp2, B7=Dn2, B8=SBU2, B9=VBUS, B12=GND, SHELL=GND), and IDENTICAL electrical specs (USB 2.0, 20 Vdc, 5A VBUS). Only difference: body is 0.5 mm taller above the PCB (10.5 mm vs 10.0 mm) and the mid-mount step is 0.55 mm deeper. Drops onto existing PCB footprint with no rework.</small></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td><b>CL05A105KP5NNNC</b><br><small>Samsung</small></td>
+        <td>4</td>
+        <td><small>tiav3_s14160: C5 C6 C7 C9</small></td>
+        <td><small>0402 10V X5R 10%</small></td>
+        <td style="background:#f5a623;color:white;text-align:center;font-size:0.85em">review</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL05A105KP5NNNC/3886734" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Samsung MPN active but currently OOS at DigiKey (per Google snippet). If BOM Manager shows 0 stock, substitute Murata GRM155R61A105KE15J or Samsung CL05A105KQ5NNNC (16V X5R same footprint).</small></td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td><b>CL10A105KA8NNNC</b><br><small>Samsung</small></td>
+        <td>3</td>
+        <td><small>bias-control-lt8362: C3&lt;br&gt;power-supply: C2 C8</small></td>
+        <td><small>0603 25V X5R 10%</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A105KA8NNNC/3886760" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td><b>CL10A225KO8NNNC</b><br><small>Samsung</small></td>
+        <td>7</td>
+        <td><small>bias-control-lt8362: C2 C7 C9 C10 C14 C17 C18</small></td>
+        <td><small>0603 16V X5R 10%</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A225KO8NNNC/3886698" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>VERIFIED ACTIVE: 261k in stock at DigiKey, $0.08 ea. Samsung 2.2uF 16V X5R 0603 +/-10%. Original Murata GRM188R61A225KE34D is OBSOLETE; first Samsung pick KO5LNNC was rejected by BOM Manager. KO8NNNC has a confirmed live DigiKey product page.</small></td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td><b>CL10A226MQ8NRNC</b><br><small>Samsung</small></td>
+        <td>8</td>
+        <td><small>bias-control-lt8362: C1 C4&lt;br&gt;power-supply: C1 C3 C5 C6 C15&lt;br&gt;tiav3_s14160: C8</small></td>
+        <td><small>0603 6.3V X5R 20%</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A226MQ8NRNC/3886851" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Standardized on Samsung CL series (per user preference). Murata GRM188R60J226MEA0D would also work.</small></td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td><b>CL10B103KB8NNNC</b><br><small>Samsung</small></td>
+        <td>2</td>
+        <td><small>bias-control-lt8362: C16&lt;br&gt;power-supply: C17</small></td>
+        <td><small>0603 50V X7R 10%</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B103KB8NNNC/3886727" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Old BOM PN 445-12286-1-ND was 0402; substitution applies to 0603.</small></td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td><b>CL10B222KB8NNNC</b><br><small>Samsung</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: C15</small></td>
+        <td><small>0603 50V X7R 10%</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B222KB8NNNC/3886768" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td><b>CL31B225KBHNNNE</b><br><small>Samsung</small></td>
+        <td>2</td>
+        <td><small>tiav3_s14160: C1 C4</small></td>
+        <td><small>1206 50V X7R 10%</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B225KBHNNNE/3889377" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>TIA BOARD ONLY (C1/C4). Low-voltage bypass — standard 50V 1206 is fine.</small></td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td><b>CL31B225KCHSNNE</b><br><small>Samsung</small></td>
+        <td>5</td>
+        <td><small>bias-control-lt8362: C5 C6 C8 C11 C13</small></td>
+        <td><small>1206 100V X7R 10%</small></td>
+        <td style="background:#f5a623;color:white;text-align:center;font-size:0.85em">review</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B225KCHSNNE/3888796" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Standardized on Samsung CL series. Original Murata GRM31CR72A225KA73L is OBSOLETE. Samsung CL31B225KCHSNNE confirmed active (2.2uF 100V X7R 1206 10%). NOTE: ANY X7R 1206 at 70V DC will derate ~50-70%. If C5/6/8/11/13 are critical bulk caps, consider 1210/1812 pkg or 2x parallel.</small></td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td><b>SSQ-103-01-G-D</b><br><small>Samtec</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: J1</small></td>
+        <td><small>2x3 socket, 2.54mm, gold, 1mm depth</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/product-detail/en/samtec-inc/SSQ-103-01-G-D/SAM1179-03-ND/1110567" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>TIA board J1.</small></td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td><b>SSQ-103-03-G-D</b><br><small>Samtec</small></td>
+        <td>1</td>
+        <td><small>power-supply: J3</small></td>
+        <td><small>2x3 socket, 2.54mm, gold, 3mm depth</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samtec-inc/SSQ-103-03-G-D/SAM1196-03-ND/1111460" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Power-supply board J3.</small></td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td><b>TSM-104-01-L-SV-P-TR</b><br><small>Samtec</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: J2</small></td>
+        <td><small>1x4 SMD vertical, 2.54mm (P-TR loose cut-tape)</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/samtec-inc/TSM-104-01-L-SV-P-TR/2685582" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Swapped from -T-SV-TR (T&amp;R only, can't ship qty 1) to -L-SV-P-TR (P-TR = pre-loaded loose tape, orderable qty 1). Same 1x4 SMD vertical 2.54mm header; 'L' vs 'T' is plating spec (gold vs tin). Pin-1 'right' is silkscreen-only — connector is symmetric.</small></td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td><b>TSW-103-07-F-D</b><br><small>Samtec</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: J3</small></td>
+        <td><small>2x3 THM vertical, 2.54mm</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/product-detail/en/samtec-inc/TSW-103-07-F-D/SAM10846-ND/2685876" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Bias board J3 (SWD/Cortex Debug). The schematic symbol is 'Conn_01x06' but the 2x03 footprint indicates dual-row.</small></td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td><b>RMCF0402FT10R0</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: R11</small></td>
+        <td><small>0402 1% 1/16W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT10R0/1761802" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>Hand-solder footprint takes same MPN.</small></td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td><b>RMCF0402FT1K50</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: R2</small></td>
+        <td><small>0402 1% 1/16W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT1K50/1761791" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td><b>RMCF0402FT30R1</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: R23</small></td>
+        <td><small>0402 1% 1/16W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT30R1/1761794" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>30.1Ω chosen as closest E96 to '30'.</small></td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td><b>RMCF0402FT3R01</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: R5</small></td>
+        <td><small>0402 1% 1/16W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT3R01/1761735" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>3.01Ω chosen as closest E96 to '3.0'.</small></td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td><b>RMCF0402FT49R9</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: R1</small></td>
+        <td><small>0402 1% 1/16W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT49R9/1761808" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>49.9Ω (standard 50Ω term).</small></td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td><b>RMCF0402FT4K99</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: R7</small></td>
+        <td><small>0402 1% 1/16W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT4K99/1761778" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>4.99k 1%.</small></td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td><b>RMCF0402FT68R0</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: R3</small></td>
+        <td><small>0402 1% 1/16W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT68R0/1761786" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td><b>RMCF0603FT1M00</b><br><small>Stackpole</small></td>
+        <td>2</td>
+        <td><small>bias-control-lt8362: R4 R5</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1M00/1760923" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td><b>RMCF0603FT24K9</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>power-supply: R9</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT24K9/1760927" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td><b>RMCF0603FT36K5</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: R11</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT36K5/1761011" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td><b>RMCF0603FT39K0</b><br><small>Stackpole</small></td>
+        <td>3</td>
+        <td><small>bias-control-lt8362: R12 R15 R16</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT39K0/1714098" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td><b>RMCF0603FT4R99</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: R13</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#ffc107;color:white;text-align:center;font-size:0.85em">medium</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT4R99/1760750" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>BOM Value 'R13 = 5' — assumed 5.0 ohm; picked 4.99Ω 1% (closest E96). If 5.1Ω is intended, use RMCF0603FT5R10CT-ND.</small></td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td><b>RMCF0603FT52K3</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: R6</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT52K3/1714113" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>R6 — assumed LT8362 variant (52.3k). For LT8361 build, swap to RMCF0603FT39K0CT-ND.</small></td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td><b>RMCF0603FT5K10</b><br><small>Stackpole</small></td>
+        <td>6</td>
+        <td><small>bias-control-lt8362: R1 R3 R7 R8 R9 R10</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT5K10/1760908" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td><b>RMCF0603FT64K9</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>power-supply: R8</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT64K9/1760863" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td><b>RMCF0603FT69K8</b><br><small>Stackpole</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: R2</small></td>
+        <td><small>0603 1% 1/10W</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT69K8/1760991" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td><b>LM2776DBVR</b><br><small>Texas Instruments</small></td>
+        <td>1</td>
+        <td><small>power-supply: U1</small></td>
+        <td><small>SOT-23-6</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/texas-instruments/LM2776DBVR/5356685" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td><b>OPA847IDBVT</b><br><small>Texas Instruments</small></td>
+        <td>1</td>
+        <td><small>tiav3_s14160: U1</small></td>
+        <td><small>SOT-23-6</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/texas-instruments/OPA847IDBVT/565787" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td><b>TPS72301DBVR</b><br><small>Texas Instruments</small></td>
+        <td>1</td>
+        <td><small>power-supply: U3</small></td>
+        <td><small>SOT-23-5</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/texas-instruments/TPS72301DBVR/1672722" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td><b>TPS79333DBVR</b><br><small>Texas Instruments</small></td>
+        <td>1</td>
+        <td><small>power-supply: U5</small></td>
+        <td><small>SOT-23-5</small></td>
+        <td style="background:#28a745;color:white;text-align:center;font-size:0.85em">high</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/detail/texas-instruments/TPS79333DBVR/476149" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small></small></td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td><b>CC0603JRNPO9BN250</b><br><small>Yageo</small></td>
+        <td>1</td>
+        <td><small>bias-control-lt8362: C12</small></td>
+        <td><small>0603 50V C0G/NP0 5%</small></td>
+        <td style="background:#f5a623;color:white;text-align:center;font-size:0.85em">review</td>
+        <td><a class="open" href="https://www.digikey.com/en/products/filter/ceramic-capacitors/60" target="_blank" rel="noopener">Open on DigiKey →</a></td>
+        <td><small>C12 (U2 LDO feedforward cap, sees ~49V steady state across R15). Yageo CC0603JRNPO9BN250 = 25pF/50V — confirmed in stock. CAVEAT: only 4% voltage headroom on 50V part. PREFERRED: CC0603JRNPO0BN250 (same family, 100V variant — naming pattern consistent with confirmed CC0603JRNPO0BN100/101/221 100V parts at DigiKey). If 100V variant is in stock when you upload to BOM Manager, swap to it for 2x HV headroom. See HV_AUDIT.md.</small></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <h3>Order separately (not on DigiKey)</h3>
+    <ul>
+      <li><b>TestPoint</b> · bias-control-lt8362: HV1 HV2 HV3 HV4 HV5 HV6 HV9 TP1 TP_1.22V1 TP_BoostEnable1 TP_GND1 TP_GND2 TP_MCP_Out1 — Test-point pads — no part to order.</li>
+      <li><b>S14160-30</b> · tiav3_s14160: D2 — NOT STOCKED AT DIGIKEY. Order directly from Hamamatsu (shop.hamamatsu.com) or via sales rep. Newark/Farnell sometimes carry small qty.</li>
+    </ul>
+  </div>
+</body>
+</html>

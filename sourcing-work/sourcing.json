@@ -1,0 +1,453 @@
+{
+  "comment": "Key = '<Value>||<Footprint>' (from KiCad BOM fields). Used as the join key to attach DigiKey sourcing info to each BOM line.",
+  "parts": {
+    "22u||C_0603_1608Metric": {
+      "digikey_pn": "",
+      "mfr": "Samsung",
+      "mpn": "CL10A226MQ8NRNC",
+      "package": "0603 6.3V X5R 20%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A226MQ8NRNC/3886851",
+      "confidence": "high",
+      "notes": "Standardized on Samsung CL series (per user preference). Murata GRM188R60J226MEA0D would also work."
+    },
+    "2.2u||C_0603_1608Metric": {
+      "digikey_pn": "",
+      "mfr": "Samsung",
+      "mpn": "CL10A225KO8NNNC",
+      "package": "0603 16V X5R 10%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A225KO8NNNC/3886698",
+      "confidence": "high",
+      "notes": "VERIFIED ACTIVE: 261k in stock at DigiKey, $0.08 ea. Samsung 2.2uF 16V X5R 0603 +/-10%. Original Murata GRM188R61A225KE34D is OBSOLETE; first Samsung pick KO5LNNC was rejected by BOM Manager. KO8NNNC has a confirmed live DigiKey product page."
+    },
+    "1u||C_0603_1608Metric": {
+      "digikey_pn": "1276-1184-1-ND",
+      "mfr": "Samsung",
+      "mpn": "CL10A105KA8NNNC",
+      "package": "0603 25V X5R 10%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A105KA8NNNC/3886760",
+      "confidence": "high",
+      "notes": ""
+    },
+    "10n||C_0603_1608Metric": {
+      "digikey_pn": "1276-1018-1-ND",
+      "mfr": "Samsung",
+      "mpn": "CL10B103KB8NNNC",
+      "package": "0603 50V X7R 10%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B103KB8NNNC/3886727",
+      "confidence": "high",
+      "notes": "Old BOM PN 445-12286-1-ND was 0402; substitution applies to 0603."
+    },
+    "2.2n||C_0603_1608Metric": {
+      "digikey_pn": "1276-1004-1-ND",
+      "mfr": "Samsung",
+      "mpn": "CL10B222KB8NNNC",
+      "package": "0603 50V X7R 10%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B222KB8NNNC/3886768",
+      "confidence": "high",
+      "notes": ""
+    },
+    "25pF||C_0603_1608Metric": {
+      "digikey_pn": "",
+      "mfr": "Yageo",
+      "mpn": "CC0603JRNPO9BN250",
+      "package": "0603 50V C0G/NP0 5%",
+      "url": "https://www.digikey.com/en/products/filter/ceramic-capacitors/60",
+      "confidence": "review",
+      "notes": "C12 (U2 LDO feedforward cap, sees ~49V steady state across R15). Yageo CC0603JRNPO9BN250 = 25pF/50V — confirmed in stock. CAVEAT: only 4% voltage headroom on 50V part. PREFERRED: CC0603JRNPO0BN250 (same family, 100V variant — naming pattern consistent with confirmed CC0603JRNPO0BN100/101/221 100V parts at DigiKey). If 100V variant is in stock when you upload to BOM Manager, swap to it for 2x HV headroom. See HV_AUDIT.md."
+    },
+    "2.2uF||C_1206_3216Metric": {
+      "digikey_pn": "",
+      "mfr": "Samsung",
+      "mpn": "CL31B225KCHSNNE",
+      "package": "1206 100V X7R 10%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B225KCHSNNE/3888796",
+      "confidence": "review",
+      "notes": "Standardized on Samsung CL series. Original Murata GRM31CR72A225KA73L is OBSOLETE. Samsung CL31B225KCHSNNE confirmed active (2.2uF 100V X7R 1206 10%). NOTE: ANY X7R 1206 at 70V DC will derate ~50-70%. If C5/6/8/11/13 are critical bulk caps, consider 1210/1812 pkg or 2x parallel."
+    },
+    "2.2u||C_1206_3216Metric": {
+      "digikey_pn": "1276-1291-1-ND",
+      "mfr": "Samsung",
+      "mpn": "CL31B225KBHNNNE",
+      "package": "1206 50V X7R 10%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B225KBHNNNE/3889377",
+      "confidence": "high",
+      "notes": "TIA BOARD ONLY (C1/C4). Low-voltage bypass — standard 50V 1206 is fine."
+    },
+    "62pF||C_0402_1005Metric": {
+      "digikey_pn": "490-12715-1-ND",
+      "mfr": "Murata",
+      "mpn": "GCM1555C1H620GA16J",
+      "package": "0402 50V C0G 2%",
+      "url": "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H620GA16J/5247920",
+      "confidence": "medium",
+      "notes": "Used 2% C0G — DigiKey didn't stock a 5% Murata GRM 0402/50V 62pF; tighter spec is acceptable."
+    },
+    "1u||C_0402_1005Metric": {
+      "digikey_pn": "",
+      "mfr": "Samsung",
+      "mpn": "CL05A105KP5NNNC",
+      "package": "0402 10V X5R 10%",
+      "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL05A105KP5NNNC/3886734",
+      "confidence": "review",
+      "notes": "Samsung MPN active but currently OOS at DigiKey (per Google snippet). If BOM Manager shows 0 stock, substitute Murata GRM155R61A105KE15J or Samsung CL05A105KQ5NNNC (16V X5R same footprint)."
+    },
+
+    "1N4148WS||D_SOD-323F": {
+      "digikey_pn": "1N4148WS-FDICT-ND",
+      "mfr": "Diodes Inc.",
+      "mpn": "1N4148WS-7-F",
+      "package": "SOD-323",
+      "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/1N4148WS-7-F/815281",
+      "confidence": "high",
+      "notes": ""
+    },
+    "PMEG6030EP||D_SOD-128": {
+      "digikey_pn": "1727-5218-1-ND",
+      "mfr": "Nexperia",
+      "mpn": "PMEG6030EP,115",
+      "package": "SOD-128",
+      "url": "https://www.digikey.com/en/products/detail/nexperia-usa-inc/PMEG6030EP-115/2531817",
+      "confidence": "medium",
+      "notes": "Often on backorder at DigiKey. Future Electronics typically has stock. If lead time matters, source from Future."
+    },
+
+    "LT8361EMSE/LT8362EMSE||LT8364IMSE-PBF": {
+      "digikey_pn": "LT8362EMSE#PBF-ND",
+      "mfr": "Analog Devices",
+      "mpn": "LT8362EMSE#PBF",
+      "package": "MSOP-16 EP",
+      "url": "https://www.digikey.com/en/products/detail/analog-devices-inc/LT8362EMSE-PBF/7599731",
+      "confidence": "high",
+      "notes": "Project README/git history shows LT8362 selected (LT8361 was the alternative). R6 value pairs with this (52.3k)."
+    },
+    "ATSAMD21E18A-AF||ATSAMD21E18A-AF": {
+      "digikey_pn": "",
+      "mfr": "Microchip",
+      "mpn": "ATSAMD21E18A-AFT",
+      "package": "TQFP-32 7x7, AEC-Q100 automotive",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/ATSAMD21E18A-AFT/5057223",
+      "confidence": "high",
+      "notes": "Matches schematic -AF (AEC-Q100 automotive, -40 to +125C). -AFT suffix is the cut-tape/T&R packaging variant of the same -AF die (orderable qty 1); the bare -AF MPN is tray-only at DigiKey."
+    },
+    "MCP47FEB22A2-E_ST||SOP65P640X120-8N": {
+      "digikey_pn": "MCP47FEB22A2-E/ST-ND",
+      "mfr": "Microchip",
+      "mpn": "MCP47FEB22A2-E/ST",
+      "package": "TSSOP-8",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/MCP47FEB22A2-E-ST/5033359",
+      "confidence": "high",
+      "notes": "Dual 12-bit DAC, I2C address variant A2."
+    },
+    "MIC5317-3.3YM5-TR||MIC5317-3.3YM5-TR": {
+      "digikey_pn": "576-4715-1-ND",
+      "mfr": "Microchip",
+      "mpn": "MIC5317-3.3YM5-TR",
+      "package": "SOT-23-5",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/MIC5317-3-3YM5-TR/5049120",
+      "confidence": "high",
+      "notes": ""
+    },
+    "RT9072B||SOT-23-5": {
+      "digikey_pn": "",
+      "mfr": "Analog Devices",
+      "mpn": "LT3014ES5#TRPBF",
+      "package": "SOT-23-5",
+      "url": "https://www.digikey.com/en/products/detail/analog-devices-inc/LT3014ES5-TRPBF/889456",
+      "confidence": "high",
+      "notes": "TRUE DROP-IN: original Richtek RT9072BGB is OBSOLETE. After confirming schematic context (U2 sits BETWEEN LT8362 boost output and BIAS rail via R13 sense resistor — Vin sees up to ~70V), the correct replacement is LT3014ES5#TRPBF: 80V Vin (matches RT9072B), 20mA out, 1.22V min Vout (matches), adjustable, SOT-23-5, SHDN on pin 3 (matches LDO_SHDN signal). No PCB or schematic changes needed. Earlier picks (LT1761 20V, MIC5235 30V, LT3008 45V) would have FAILED at 70V."
+    },
+    "MCP6C02T-020E/CHY||SOT-23-6": {
+      "digikey_pn": "",
+      "mfr": "Microchip",
+      "mpn": "MCP6C02T-020E/CHYVAO",
+      "package": "SOT-23-6",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/MCP6C02T-020E-CHYVAO/10674102",
+      "confidence": "high",
+      "notes": "TRUE DROP-IN: same die / gain 20 V/V / SOT-23-6 / pinout as the original MCP6C02T-020E/CHY. The 'VAO' suffix is Microchip's AEC-Q100 automotive-qualified variant (same silicon, tighter qualification) — in stock at DigiKey while the bare /CHY is OOS until 22-Jun-2026. No firmware change, no R13 change."
+    },
+    "LM2776||LM2776DBVR": {
+      "digikey_pn": "296-43957-1-ND",
+      "mfr": "Texas Instruments",
+      "mpn": "LM2776DBVR",
+      "package": "SOT-23-6",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/LM2776DBVR/5356685",
+      "confidence": "high",
+      "notes": ""
+    },
+    "TPS72301DBVR||TPS72301DBVR": {
+      "digikey_pn": "296-19228-1-ND",
+      "mfr": "Texas Instruments",
+      "mpn": "TPS72301DBVR",
+      "package": "SOT-23-5",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS72301DBVR/1672722",
+      "confidence": "high",
+      "notes": ""
+    },
+    "TPS79333DBVR||TPS79333DBVR": {
+      "digikey_pn": "296-12961-1-ND",
+      "mfr": "Texas Instruments",
+      "mpn": "TPS79333DBVR",
+      "package": "SOT-23-5",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS79333DBVR/476149",
+      "confidence": "high",
+      "notes": ""
+    },
+    "OPA847IDBVT||OPA847IDBVT": {
+      "digikey_pn": "OPA847IDBVTCT-ND",
+      "mfr": "Texas Instruments",
+      "mpn": "OPA847IDBVT",
+      "package": "SOT-23-6",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/OPA847IDBVT/565787",
+      "confidence": "high",
+      "notes": ""
+    },
+    "S14160-30||S14160-30": {
+      "digikey_pn": "",
+      "mfr": "Hamamatsu",
+      "mpn": "S14160-3050PS",
+      "package": "Surface mount",
+      "url": "https://www.hamamatsu.com/us/en/product/optical-sensors/mppc/",
+      "confidence": "supplier-elsewhere",
+      "notes": "NOT STOCKED AT DIGIKEY. Order directly from Hamamatsu (shop.hamamatsu.com) or via sales rep. Newark/Farnell sometimes carry small qty."
+    },
+
+    "330nH||L_0603_1608Metric": {
+      "digikey_pn": "490-5170-1-ND",
+      "mfr": "Murata",
+      "mpn": "LQW18CAR33J00D",
+      "package": "0603 wirewound",
+      "url": "https://www.digikey.com/en/products/detail/murata-electronics/LQW18CAR33J00D/9742071",
+      "confidence": "high",
+      "notes": "High-SRF wirewound, ~1.4 GHz SRF. Good for TIA bias-T."
+    },
+    "33nH||L_0603_1608Metric_Pad1.05x0.95mm_HandSolder": {
+      "digikey_pn": "490-1196-1-ND",
+      "mfr": "Murata",
+      "mpn": "LQW18AN33NJ00D",
+      "package": "0603 wirewound",
+      "url": "https://www.digikey.com/en/products/detail/murata-electronics/LQW18AN33NJ00D/584383",
+      "confidence": "high",
+      "notes": "High-SRF wirewound. Hand-solder footprint variant uses same MPN."
+    },
+    "3.3uH||SRP05204R7K": {
+      "digikey_pn": "SRP5020TA-3R3MCT-ND",
+      "mfr": "Bourns",
+      "mpn": "SRP5020TA-3R3M",
+      "package": "SRP5020 (5.0x5.0x2.0mm)",
+      "url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP5020TA-3R3M/7785064",
+      "confidence": "high",
+      "notes": "KiCad fp 'SRP05204R7K' is the SRP5020 land pattern (the '4R7K' in the fp name was the original 4.7uH part; the BOM Value field overrides to 3.3uH). I_sat 7.3A is plenty for LT8362."
+    },
+
+    "USB_C_Receptacle_USB2.0_16P||CUI_UJ20-C-V-C-2-SMT-TR_fixedV2": {
+      "digikey_pn": "",
+      "mfr": "Same Sky (CUI Devices)",
+      "mpn": "UJ20-C-V-C-3-SMT-TR",
+      "package": "SMT vertical mid-mount USB-C",
+      "url": "https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/UJ20-C-V-C-3-SMT-TR/25583800",
+      "confidence": "high",
+      "notes": "SUBSTITUTE for -V-C-2 (which is on backorder at DigiKey). Verified via datasheet comparison: -3 variant has IDENTICAL PCB footprint, IDENTICAL pin assignments (A1=GND, A4=VBUS, A5=CC1, A6=Dp1, A7=Dn1, A8=SBU1, A9=VBUS, A12=GND, B1=GND, B4=VBUS, B5=CC2, B6=Dp2, B7=Dn2, B8=SBU2, B9=VBUS, B12=GND, SHELL=GND), and IDENTICAL electrical specs (USB 2.0, 20 Vdc, 5A VBUS). Only difference: body is 0.5 mm taller above the PCB (10.5 mm vs 10.0 mm) and the mid-mount step is 0.55 mm deeper. Drops onto existing PCB footprint with no rework."
+    },
+    "Conn_01x04||PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right": {
+      "digikey_pn": "",
+      "mfr": "Samtec",
+      "mpn": "TSM-104-01-L-SV-P-TR",
+      "package": "1x4 SMD vertical, 2.54mm (P-TR loose cut-tape)",
+      "url": "https://www.digikey.com/en/products/detail/samtec-inc/TSM-104-01-L-SV-P-TR/2685582",
+      "confidence": "high",
+      "notes": "Swapped from -T-SV-TR (T&R only, can't ship qty 1) to -L-SV-P-TR (P-TR = pre-loaded loose tape, orderable qty 1). Same 1x4 SMD vertical 2.54mm header; 'L' vs 'T' is plating spec (gold vs tin). Pin-1 'right' is silkscreen-only — connector is symmetric."
+    },
+    "Conn_01x06||PinHeader_2x03_P2.54mm_Vertical": {
+      "digikey_pn": "SAM10846-ND",
+      "mfr": "Samtec",
+      "mpn": "TSW-103-07-F-D",
+      "package": "2x3 THM vertical, 2.54mm",
+      "url": "https://www.digikey.com/product-detail/en/samtec-inc/TSW-103-07-F-D/SAM10846-ND/2685876",
+      "confidence": "high",
+      "notes": "Bias board J3 (SWD/Cortex Debug). The schematic symbol is 'Conn_01x06' but the 2x03 footprint indicates dual-row."
+    },
+    "SSQ-103-01-G-D||PinHeader_2x03_P2.54mm_Vertical": {
+      "digikey_pn": "SAM1179-03-ND",
+      "mfr": "Samtec",
+      "mpn": "SSQ-103-01-G-D",
+      "package": "2x3 socket, 2.54mm, gold, 1mm depth",
+      "url": "https://www.digikey.com/product-detail/en/samtec-inc/SSQ-103-01-G-D/SAM1179-03-ND/1110567",
+      "confidence": "high",
+      "notes": "TIA board J1."
+    },
+    "SSQ-103-03-G-D||PinHeader_2x03_P2.54mm_Vertical": {
+      "digikey_pn": "SAM1196-03-ND",
+      "mfr": "Samtec",
+      "mpn": "SSQ-103-03-G-D",
+      "package": "2x3 socket, 2.54mm, gold, 3mm depth",
+      "url": "https://www.digikey.com/en/products/detail/samtec-inc/SSQ-103-03-G-D/SAM1196-03-ND/1111460",
+      "confidence": "high",
+      "notes": "Power-supply board J3."
+    },
+    "Conn_Coaxial||SMB_Jack_Vertical": {
+      "digikey_pn": "J607-ND",
+      "mfr": "Cinch / Johnson",
+      "mpn": "131-3701-261",
+      "package": "SMB jack vertical THM",
+      "url": "https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/131-3701-261/275098",
+      "confidence": "high",
+      "notes": "TIA board J2 RF output."
+    },
+
+    "5.1k||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT5K10CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT5K10",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT5K10/1760908",
+      "confidence": "high",
+      "notes": ""
+    },
+    "69.8k||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT69K8CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT69K8",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT69K8/1760991",
+      "confidence": "high",
+      "notes": ""
+    },
+    "1M||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT1M00CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT1M00",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1M00/1760923",
+      "confidence": "high",
+      "notes": ""
+    },
+    "39k (LT8361) / 52.3k (LT8362)||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT52K3CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT52K3",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT52K3/1714113",
+      "confidence": "high",
+      "notes": "R6 — assumed LT8362 variant (52.3k). For LT8361 build, swap to RMCF0603FT39K0CT-ND."
+    },
+    "36.5k||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT36K5CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT36K5",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT36K5/1761011",
+      "confidence": "high",
+      "notes": ""
+    },
+    "39k||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT39K0CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT39K0",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT39K0/1714098",
+      "confidence": "high",
+      "notes": ""
+    },
+    "5||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT4R99CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT4R99",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT4R99/1760750",
+      "confidence": "medium",
+      "notes": "BOM Value 'R13 = 5' — assumed 5.0 ohm; picked 4.99Ω 1% (closest E96). If 5.1Ω is intended, use RMCF0603FT5R10CT-ND."
+    },
+    "64.9k||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT64K9CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT64K9",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT64K9/1760863",
+      "confidence": "high",
+      "notes": ""
+    },
+    "24.9k||R_0603_1608Metric": {
+      "digikey_pn": "RMCF0603FT24K9CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0603FT24K9",
+      "package": "0603 1% 1/10W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT24K9/1760927",
+      "confidence": "high",
+      "notes": ""
+    },
+
+    "1.5k||R_0402_1005Metric": {
+      "digikey_pn": "RMCF0402FT1K50CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0402FT1K50",
+      "package": "0402 1% 1/16W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT1K50/1761791",
+      "confidence": "high",
+      "notes": ""
+    },
+    "3.0||R_0402_1005Metric": {
+      "digikey_pn": "RMCF0402FT3R01CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0402FT3R01",
+      "package": "0402 1% 1/16W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT3R01/1761735",
+      "confidence": "high",
+      "notes": "3.01Ω chosen as closest E96 to '3.0'."
+    },
+    "30||R_0402_1005Metric": {
+      "digikey_pn": "RMCF0402FT30R1CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0402FT30R1",
+      "package": "0402 1% 1/16W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT30R1/1761794",
+      "confidence": "high",
+      "notes": "30.1Ω chosen as closest E96 to '30'."
+    },
+    "50||R_0402_1005Metric": {
+      "digikey_pn": "RMCF0402FT49R9CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0402FT49R9",
+      "package": "0402 1% 1/16W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT49R9/1761808",
+      "confidence": "high",
+      "notes": "49.9Ω (standard 50Ω term)."
+    },
+    "5k||R_0402_1005Metric": {
+      "digikey_pn": "RMCF0402FT4K99CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0402FT4K99",
+      "package": "0402 1% 1/16W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT4K99/1761778",
+      "confidence": "high",
+      "notes": "4.99k 1%."
+    },
+    "68||R_0402_1005Metric": {
+      "digikey_pn": "RMCF0402FT68R0CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0402FT68R0",
+      "package": "0402 1% 1/16W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT68R0/1761786",
+      "confidence": "high",
+      "notes": ""
+    },
+    "10||R_0402_1005Metric_Pad0.72x0.64mm_HandSolder": {
+      "digikey_pn": "RMCF0402FT10R0CT-ND",
+      "mfr": "Stackpole",
+      "mpn": "RMCF0402FT10R0",
+      "package": "0402 1% 1/16W",
+      "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0402FT10R0/1761802",
+      "confidence": "high",
+      "notes": "Hand-solder footprint takes same MPN."
+    },
+
+    "TestPoint||TestPoint_Pad_D1.0mm": {
+      "digikey_pn": "",
+      "mfr": "",
+      "mpn": "",
+      "package": "",
+      "url": "",
+      "confidence": "skip",
+      "notes": "Test-point pads — no part to order."
+    }
+  }
+}

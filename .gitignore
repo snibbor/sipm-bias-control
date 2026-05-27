@@ -15,6 +15,7 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
+sourcing-work/node_modules/*
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -26,6 +27,7 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+!sourcing-work/*.csv
 
 #also ignore step files which may not be licensed under open source
 *.step

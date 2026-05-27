@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SiPM Bias Control — DigiKey Sourcing</title>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; max-width: 1000px; margin: 2em auto; padding: 0 1em; line-height: 1.5; }
+    .primary { background: #e8f4ff; border-left: 4px solid #0066cc; padding: 1em; margin: 1em 0; }
+    .warn { background: #fff7e6; border-left: 4px solid #f5a623; padding: 1em; margin: 1em 0; }
+    .info { background: #f0f0f0; border-left: 4px solid #888; padding: 1em; margin: 1em 0; }
+    code { background: #f4f4f4; padding: 1px 4px; border-radius: 2px; }
+    a.btn { display: inline-block; background: #0066cc; color: white; padding: 0.6em 1.2em; border-radius: 4px; text-decoration: none; margin-top: 0.5em; }
+    a.btn:hover { background: #004499; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9em; margin: 1em 0; }
+    th, td { border: 1px solid #ddd; padding: 0.3em 0.5em; text-align: left; vertical-align: top; }
+    th { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>SiPM Bias Control — DigiKey Sourcing</h1>
+  <p>Three boards, 47 unique line items / 80 units total. Test points (13) and the Hamamatsu SiPM are excluded.</p>
+
+  <div class="primary">
+    <h2>Order from DigiKey</h2>
+    <p>Upload <code><a href="digikey_bom_manager.csv">digikey_bom_manager.csv</a></code> to
+       <a href="https://www.digikey.com/bom">digikey.com/bom</a>. Map columns: MPN, Qty,
+       Customer Reference, Description, Manufacturer. Process → Add to Cart.</p>
+    <a class="btn" href="https://www.digikey.com/bom" target="_blank">Open DigiKey BOM Manager →</a>
+    <p style="font-size:0.85em;margin-top:1em">If a row gets flagged, click "View Substitutes" inline — DigiKey's parametric match engine is the authoritative answer.</p>
+  </div>
+
+  <h2>OOS items at DigiKey — what to do</h2>
+  <table>
+    <thead><tr><th>Original schematic part</th><th>DigiKey status</th><th>Now in CSV</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>RT9072B</code> (U2 LDO)</td>
+        <td>OBSOLETE (no replacement variant)</td>
+        <td><code>LT1761ES5-SD#TRMPBF</code></td>
+        <td>SOT-23-5 adjustable LDO, 20V Vin, 100mA. <b>VERIFY U2 Vin ≤20V in schematic</b> — almost certainly yes if U2 feeds the 1.22V testpoint from USB-5V or 3.3V rail.</td>
+      </tr>
+      <tr>
+        <td><code>MCP6C02T-020E/CHY</code> (U3 current sense)</td>
+        <td>OOS until 22-Jun-2026</td>
+        <td><code>MCP6C02T-050E/CHY</code></td>
+        <td>Same SOT-23-6 pkg/pinout, gain 50 V/V instead of 20. <b>Firmware change: scale current-sense ADC reading by 20/50 = 0.4</b>. No PCB change.</td>
+      </tr>
+      <tr>
+        <td><code>UJ20-C-V-C-2-SMT-TR</code> (J4 USB-C)</td>
+        <td>Restock 26-May-2026 (today)</td>
+        <td><code>UJ20-C-V-C-2-SMT-TR</code> (unchanged)</td>
+        <td>Confirmed at DigiKey, restock today. No pin-compatible drop-in exists; sibling variants (-V-C-1, -V-C-3, -V-SMT-TR-68) have different PCB footprints.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warn">
+    <h2>Items needing your eyes on the schematic</h2>
+    <ul>
+      <li><b>U2 (LT1761ES5-SD#TRMPBF):</b> 20V Vin tolerance. If U2 sits on a rail >20V, this substitute won't survive. The <code>TP_1.22V1</code> testpoint suggests U2 produces a 1.22V reference from a low-voltage input (5V or 3.3V), which is fine — but confirm.</li>
+      <li><b>U3 (MCP6C02T-050E/CHY):</b> Gain changed from 20 to 50 V/V. Firmware needs to multiply the ADC reading by 0.4 to keep current calibration consistent. If firmware is auto-scaling already (e.g. via a gain-config register), no work. Otherwise, one constant in the firmware needs to change.</li>
+      <li><b>C12 (Samsung CL10C220JB8NNNC):</b> Value changed 25pF → 22pF because Samsung doesn't make 25pF/0603/C0G at DigiKey. ±5pF on LT8362 FB compensation is electrically negligible. If you want exactly 25pF, ask for a non-Samsung swap.</li>
+      <li><b>R6 (52.3k):</b> Assumes LT8362 build per README. For LT8361 build, swap to 39k.</li>
+      <li><b>IC2 (ATSAMD21E18A-AFT):</b> Automotive grade per your schematic (T&R variant of -AF for qty-1 ordering).</li>
+      <li><b>C5/C6/C8/C11/C13 (CL31B225KCHSNNE, 2.2µF/100V/X7R/1206):</b> X7R derates 50-70% at 70V DC bias. Consider 1210/1812 if loop margin is tight.</li>
+    </ul>
+  </div>
+
+  <h2>Order separately (not at DigiKey)</h2>
+  <ul>
+    <li><b>Hamamatsu S14160-3050PS</b> (SiPM, TIA board D2) — order from
+        <a href="https://shop.hamamatsu.com">shop.hamamatsu.com</a>. Hamamatsu MPPCs are not stocked at DigiKey.</li>
+    <li>13 test-point pads on bias board (HV1–HV9, TP1, TP_*) — not parts, just SMD pads.</li>
+  </ul>
+
+  <div class="info">
+    <h2>LCSC comparison (you checked — same price)</h2>
+    <p>For reference, <code><a href="lcsc_bom.csv">lcsc_bom.csv</a></code> is the same MPN list
+       formatted for <a href="https://www.lcsc.com/bom">lcsc.com/bom</a>. You confirmed pricing
+       is comparable to DigiKey for this BOM, so sticking with DigiKey is the right call.
+       Keeping the file as a fallback in case DigiKey OOS issues recur.</p>
+  </div>
+
+  <h2>File index</h2>
+  <table>
+    <thead><tr><th>File</th><th>What it is</th></tr></thead>
+    <tbody>
+      <tr><td><a href="digikey_bom_manager.csv">digikey_bom_manager.csv</a></td><td>★ Upload to <a href="https://www.digikey.com/bom">digikey.com/bom</a></td></tr>
+      <tr><td><a href="AUDIT.md">AUDIT.md</a></td><td>★ Schematic value → MPN → verification status for every line</td></tr>
+      <tr><td><a href="sourcing.xlsx">sourcing.xlsx</a></td><td>Multi-sheet workbook (DigiKey + LCSC + per-board)</td></tr>
+      <tr><td><a href="sourcing_master.csv">sourcing_master.csv</a></td><td>Per-BOM-line CSV across all 3 boards</td></tr>
+      <tr><td><a href="sourcing_bias-control-lt8362.csv">sourcing_bias-control-lt8362.csv</a>, <a href="sourcing_power-supply.csv">power-supply</a>, <a href="sourcing_tiav3_s14160.csv">tiav3_s14160</a></td><td>Per-board CSVs</td></tr>
+      <tr><td><a href="digikey_links.html">digikey_links.html</a></td><td>One-click product page link per part (DigiKey fallback)</td></tr>
+      <tr><td><a href="lcsc_bom.csv">lcsc_bom.csv</a></td><td>LCSC fallback (de-emphasized; pricing comparable)</td></tr>
+      <tr><td><a href="review_queue.csv">review_queue.csv</a></td><td>Flagged items for review</td></tr>
+      <tr><td><a href="sourcing.json">sourcing.json</a></td><td>Editable Value+Footprint → MPN mapping. Edit, then re-run <code>node build_*.js</code>.</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DigiKey FastAdd - DEPRECATED (use links below)</title>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; max-width: 800px; margin: 3em auto; padding: 0 1em; line-height: 1.6; }
+    .warn { background: #fff3cd; border-left: 4px solid #f5a623; padding: 1em 1.5em; margin: 1.5em 0; }
+    .options { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 1.5em; }
+    .opt { background: #e8f4ff; border-left: 4px solid #0066cc; padding: 1em; }
+    .opt h3 { margin-top: 0; }
+    a.btn { display: inline-block; background: #0066cc; color: white; padding: 0.6em 1.2em;
+            border-radius: 4px; text-decoration: none; margin-top: 0.5em; }
+    a.btn:hover { background: #004499; }
+    code { background: #f4f4f4; padding: 1px 4px; }
+  </style>
+</head>
+<body>
+  <h1>FastAdd is unreliable - use one of these instead</h1>
+
+  <div class="warn">
+    <p>DigiKey rotates the trailing digit on its <code>-ND</code> part numbers (e.g.
+       <code>490-7209-<b>1</b>-ND</code> becomes <code>490-7209-<b>6</b>-ND</code>) whenever
+       packaging vendors change. FastAdd requires the exact current <code>-ND</code> code,
+       and DigiKey blocks programmatic page access (HTTP 403) so the codes can't be verified
+       in advance.</p>
+    <p><b>Use one of the two paths below - both work with manufacturer part numbers and
+       let DigiKey resolve the current <code>-ND</code> code itself.</b></p>
+  </div>
+
+  <div class="options">
+    <div class="opt">
+      <h3>Bulk: BOM Manager</h3>
+      <p>Upload <code>digikey_bom_manager.csv</code> to DigiKey's BOM Manager.
+         It resolves all 47 MPNs to current <code>-ND</code> codes, flags any obsolete
+         parts inline, and adds the whole BOM to your cart in one click.</p>
+      <a class="btn" href="https://www.digikey.com/bom" target="_blank">Open BOM Manager</a>
+      <p style="font-size:0.85em;margin-top:0.8em">
+        File: <a href="digikey_bom_manager.csv">digikey_bom_manager.csv</a>
+      </p>
+    </div>
+    <div class="opt">
+      <h3>One-by-one: product links</h3>
+      <p>Open <a href="digikey_links.html"><b>digikey_links.html</b></a> for a table with
+         an "Open on DigiKey" button on every row. Click each button, hit <b>Add to Cart</b>
+         on the product page. DigiKey picks the current SKU automatically.</p>
+      <a class="btn" href="digikey_links.html">Open link list</a>
+      <p style="font-size:0.85em;margin-top:0.8em">47 buttons, ~5 min of clicking. Zero PN-rotation risk.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:2em">
+    For full context (review-queue items, etc.), open
+    <a href="HOWTO.html"><b>HOWTO.html</b></a>.
+  </p>
+</body>
+</html>

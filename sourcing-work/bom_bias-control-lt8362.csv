@@ -1,0 +1,28 @@
+Board,Refs,Qty,Value,Footprint
+bias-control-lt8362,C1 C4,2,22u,C_0603_1608Metric
+bias-control-lt8362,C2 C7 C9 C10 C14 C17 C18,7,2.2u,C_0603_1608Metric
+bias-control-lt8362,C3,1,1u,C_0603_1608Metric
+bias-control-lt8362,C5 C6 C8 C11 C13,5,2.2uF,C_1206_3216Metric
+bias-control-lt8362,C12,1,25pF,C_0603_1608Metric
+bias-control-lt8362,C15,1,2.2n,C_0603_1608Metric
+bias-control-lt8362,C16,1,10n,C_0603_1608Metric
+bias-control-lt8362,D2,1,1N4148WS,D_SOD-323F
+bias-control-lt8362,D3,1,PMEG6030EP,D_SOD-128
+bias-control-lt8362,HV1 HV2 HV3 HV4 HV5 HV6 HV9 TP1 TP_1.22V1 TP_BoostEnable1 TP_GND1 TP_GND2 TP_MCP_Out1,13,TestPoint,TestPoint_Pad_D1.0mm
+bias-control-lt8362,IC1,1,LT8361EMSE/LT8362EMSE,LT8364IMSE-PBF
+bias-control-lt8362,IC2,1,ATSAMD21E18A-AF,ATSAMD21E18A-AF
+bias-control-lt8362,IC4,1,MCP47FEB22A2-E_ST,SOP65P640X120-8N
+bias-control-lt8362,J2,1,Conn_01x04,PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right
+bias-control-lt8362,J3,1,Conn_01x06,PinHeader_2x03_P2.54mm_Vertical
+bias-control-lt8362,J4,1,USB_C_Receptacle_USB2.0_16P,CUI_UJ20-C-V-C-2-SMT-TR_fixedV2
+bias-control-lt8362,L1,1,3.3uH,SRP05204R7K
+bias-control-lt8362,R1 R3 R7 R8 R9 R10,6,5.1k,R_0603_1608Metric
+bias-control-lt8362,R2,1,69.8k,R_0603_1608Metric
+bias-control-lt8362,R4 R5,2,1M,R_0603_1608Metric
+bias-control-lt8362,R6,1,39k (LT8361) / 52.3k (LT8362),R_0603_1608Metric
+bias-control-lt8362,R11,1,36.5k,R_0603_1608Metric
+bias-control-lt8362,R12 R15 R16,3,39k,R_0603_1608Metric
+bias-control-lt8362,R13,1,5,R_0603_1608Metric
+bias-control-lt8362,U1,1,MIC5317-3.3YM5-TR,MIC5317-3.3YM5-TR
+bias-control-lt8362,U2,1,RT9072B,SOT-23-5
+bias-control-lt8362,U3,1,MCP6C02T-020E/CHY,SOT-23-6

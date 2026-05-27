@@ -1,0 +1,10 @@
+Board,Refs,Qty,Value,Footprint,DigiKey_PN,Mfr,Mfr_PN,Package,URL,Confidence,Notes
+power-supply,C1 C3 C5 C6 C15,5,22u,C_0603_1608Metric,,Samsung,CL10A226MQ8NRNC,0603 6.3V X5R 20%,https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A226MQ8NRNC/3886851,high,Standardized on Samsung CL series (per user preference). Murata GRM188R60J226MEA0D would also work.
+power-supply,C2 C8,2,1u,C_0603_1608Metric,1276-1184-1-ND,Samsung,CL10A105KA8NNNC,0603 25V X5R 10%,https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A105KA8NNNC/3886760,high,
+power-supply,C17,1,10n,C_0603_1608Metric,1276-1018-1-ND,Samsung,CL10B103KB8NNNC,0603 50V X7R 10%,https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B103KB8NNNC/3886727,high,Old BOM PN 445-12286-1-ND was 0402; substitution applies to 0603.
+power-supply,R8,1,64.9k,R_0603_1608Metric,RMCF0603FT64K9CT-ND,Stackpole,RMCF0603FT64K9,0603 1% 1/10W,https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT64K9/1760863,high,
+power-supply,R9,1,24.9k,R_0603_1608Metric,RMCF0603FT24K9CT-ND,Stackpole,RMCF0603FT24K9,0603 1% 1/10W,https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT24K9/1760927,high,
+power-supply,U1,1,LM2776,LM2776DBVR,296-43957-1-ND,Texas Instruments,LM2776DBVR,SOT-23-6,https://www.digikey.com/en/products/detail/texas-instruments/LM2776DBVR/5356685,high,
+power-supply,U3,1,TPS72301DBVR,TPS72301DBVR,296-19228-1-ND,Texas Instruments,TPS72301DBVR,SOT-23-5,https://www.digikey.com/en/products/detail/texas-instruments/TPS72301DBVR/1672722,high,
+power-supply,U5,1,TPS79333DBVR,TPS79333DBVR,296-12961-1-ND,Texas Instruments,TPS79333DBVR,SOT-23-5,https://www.digikey.com/en/products/detail/texas-instruments/TPS79333DBVR/476149,high,
+power-supply,J3,1,SSQ-103-03-G-D,PinHeader_2x03_P2.54mm_Vertical,SAM1196-03-ND,Samtec,SSQ-103-03-G-D,"2x3 socket, 2.54mm, gold, 3mm depth",https://www.digikey.com/en/products/detail/samtec-inc/SSQ-103-03-G-D/SAM1196-03-ND/1111460,high,Power-supply board J3.
