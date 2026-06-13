@@ -11591,7 +11591,10 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Connector*:*")
 		(path "/fbf5e84f-b4ca-41e8-87c7-01740fe45256")
+		(sheetname "/")
+		(sheetfile "bias_generator_LT8362.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_poly
 			(pts
@@ -17232,7 +17235,7 @@
 				)
 			)
 		)
-		(property "Value" "RT9072B"
+		(property "Value" "RT9072B(ob)/LT3014ES5#TRP"
 			(at 0 2.9 0)
 			(layer "F.Fab")
 			(uuid "eff25ac1-d4af-4a49-9cbc-0379468576a6")
@@ -17890,7 +17893,10 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Connector*:*")
 		(path "/bae7b01c-2ece-4ae5-b45f-2e0d4281053c")
+		(sheetname "/")
+		(sheetfile "bias_generator_LT8362.kicad_sch")
 		(attr smd)
 		(fp_poly
 			(pts
@@ -37000,7 +37006,10 @@
 				(justify mirror)
 			)
 		)
+		(property ki_fp_filters "Connector*:*")
 		(path "/63e99912-3209-4b80-8f9e-636a28b6bc30")
+		(sheetname "/")
+		(sheetfile "bias_generator_LT8362.kicad_sch")
 		(attr smd)
 		(fp_poly
 			(pts

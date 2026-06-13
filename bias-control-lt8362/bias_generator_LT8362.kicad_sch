@@ -16249,7 +16249,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ae515697-6dd0-42bd-a519-a4bb9f7c8273")
 		(property "Reference" "U2"
 			(at 178.435 139.5942 0)
@@ -16259,8 +16258,8 @@
 				)
 			)
 		)
-		(property "Value" "RT9072B"
-			(at 178.435 142.3693 0)
+		(property "Value" "RT9072B(ob)/LT3014ES5#TRP"
+			(at 173.736 162.052 0)
 			(effects
 				(font
 					(size 1.27 1.27)
