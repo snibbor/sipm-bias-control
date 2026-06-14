@@ -5794,7 +5794,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "S14160-3050HS"
+		(property "Value" "S14160-30"
 			(at 86.9187 100.4507 90)
 			(effects
 				(font
@@ -5803,7 +5803,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:S14160-3050HS"
+		(property "Footprint" "footprints:S14160-30"
 			(at 93.345 102.87 0)
 			(effects
 				(font

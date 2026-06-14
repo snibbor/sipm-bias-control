@@ -1,0 +1,213 @@
+(footprint "S14160-3050HS"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(locked yes)
+	(layer "F.Cu")
+	(descr "Hamamatsu MPPC S14160-3050HS, 3.0x3.0mm 50um-pixel SiPM, surface-mount. 5 terminals: center = anode (datasheet B2), 4 corners = cathode common (A1,A3,C1,C3). phi0.7mm pads on a 2.2mm grid, body 3.4x3.4mm. Geometry + 3D model from the ComponentSearchEngine/SamacSys vendor part; pads renumbered 1=anode(center) / 2=cathode(corners) so it mates the 2-pin SiPM diode symbol SIPMLibrary:S14160-3mm (pin1=anode, pin2=cathode), following the S13360 board convention. NOTE: HS polarity is OPPOSITE the S13360 (S14160 anode = center).")
+	(tags "SiPM MPPC Hamamatsu S14160 3050HS scintillation")
+	(property "Reference" "D2"
+		(at 0 -2.45 0)
+		(layer "F.SilkS")
+		(uuid "e5d67325-ac15-463d-9f5a-fb6a519dcd78")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "S14160-3050HS"
+		(at -1.33 -2.83 0)
+		(layer "F.Fab")
+		(uuid "b37c8c0a-2456-4299-aea2-ff214653158f")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "http://www.osram-https://www.hamamatsu.com/resources/pdf/ssd/s14160-1310ps_etc_kapd1070e.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "75454c13-0d89-4f47-bc25-84611f585beb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1071c9c9-4cfb-4dff-8e0c-6a10b2b8b3c7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.2 2.14)
+		(end 0 2.54)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "217e10ef-1d45-4d5f-b57d-9675cdad8f59")
+	)
+	(fp_line
+		(start 0 1.94)
+		(end 0 2.14)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e89683c7-dab5-4d8a-8783-2ffcb62f637c")
+	)
+	(fp_line
+		(start 0 2.54)
+		(end 0 2.74)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7d80a09d-fce5-4b55-9dc5-ea8ee0e7c1f0")
+	)
+	(fp_line
+		(start 0.2 2.14)
+		(end -0.2 2.14)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1b75cadf-7427-42c5-8a3e-caed9142bf9c")
+	)
+	(fp_line
+		(start 0.2 2.14)
+		(end 0 2.54)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9dd55cb2-775e-4e5d-bd5a-a2d65e2b6aed")
+	)
+	(fp_line
+		(start 0.2 2.54)
+		(end -0.2 2.54)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c400390c-c06a-4e17-98b9-2520105758d1")
+	)
+	(fp_rect
+		(start -1.8 -1.8)
+		(end 1.8 1.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "98aaaf8a-348e-4265-8d91-257332f1fccc")
+	)
+	(fp_rect
+		(start -2 -2)
+		(end 2 2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "1b4a62b0-a423-49e5-81ef-8eedf07c805d")
+	)
+	(fp_rect
+		(start -1.7 -1.7)
+		(end 1.7 1.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "bb20da01-3b8b-4d20-8e1b-6f79078d3716")
+	)
+	(fp_rect
+		(start -1.5 -1.5)
+		(end 1.5 1.5)
+		(stroke
+			(width 0.08)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "078da820-32c8-49b5-bb66-68c765433584")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.9 0 0)
+		(layer "F.Fab")
+		(uuid "9c0b7212-8d01-4b62-9270-33d756b89f8d")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
+	)
+	(pad "1" smd circle
+		(at 0 0)
+		(size 0.7 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8d300565-6c99-40e6-bb9a-54085d9df5f1")
+	)
+	(pad "2" smd circle
+		(at -1.1 -1.1)
+		(size 0.7 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a6b15101-2277-418f-b472-1b3a41361fef")
+	)
+	(pad "2" smd circle
+		(at -1.1 1.1)
+		(size 0.7 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b51c9e1f-9aa1-42de-b97b-b6f32a9adfb0")
+	)
+	(pad "2" smd circle
+		(at 1.1 -1.1)
+		(size 0.7 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "57cec63b-4409-48a2-8529-9744506a10e5")
+	)
+	(pad "2" smd circle
+		(at 1.1 1.1)
+		(size 0.7 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a7b4a223-2515-49fe-a183-9d2fb26fa4c3")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/step/S14160-3050HS.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
